@@ -10,7 +10,7 @@ body
  height: 100vh;  
 } 
 
-.contenedor-slider 
+.slider-container 
 {  
  position: relative;  
  overflow: hidden;  
@@ -18,7 +18,7 @@ body
  height: 100vh;  
 }  
 
-.slide-izquierdo {  
+.right-slide {  
  height: 100%;  
  width: 35%;  
  position: absolute;  
@@ -27,7 +27,7 @@ body
  transition: transform 0.5s ease-in-out;  
 } 
 
-.slide-izquierdo > div {  
+.right-slide > div {  
  height: 100%;  
  width: 100%;  
  display: flex;  
@@ -37,7 +37,7 @@ body
  color: #fff;  
 } 
 
-.slide-izquierdo h1 {  
+.right-slide h1 {  
  font-size: 3rem;  
  width: 23ch;
  white-space: nowrap;
@@ -62,7 +62,7 @@ body
     }
 }
 
-.slide-izquierdo p
+.right-slide p
 {  
     font-size: 2rem;  
     margin-bottom: 10px;  
@@ -74,7 +74,7 @@ body
     animation: typing 2s steps(20, end), cursor-blink 0.5s step-end infinite alternate;
 }
 
-.slide-derecho  
+.left-slide
 {  
  height: 100%;  
  position: absolute;  
@@ -83,7 +83,7 @@ body
  width: 65%;  
  transition: transform 0.5s ease-in-out;  
 }  
-.slide-derecho > div {  
+.left-slide > div {  
  background-repeat: no-repeat;  
  background-size: cover;  
  background-position: center center;  
@@ -104,17 +104,17 @@ button:hover {
 button:focus {  
  outline: none;  
 }  
-.contenedor-slider .accion-botones button {  
+.slider-container .action-buttons button {  
     position: absolute;
     left: 33.5%;
     top: 60%;
     z-index: 100; 
 }  
-.contenedor-slider .accion-botones .bajar-button 
+.slider-container .action-buttons .down-button
 {  
     transform: translateY(-200%); 
 }  
-.contenedor-slider .accion-botones .subir-button 
+.slider-container .action-buttons .up-button
 {  
     transform: translateY(-300%);
 } 

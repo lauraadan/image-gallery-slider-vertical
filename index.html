@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,73 +14,36 @@
 </head>
 <body>
 
-<div class="contenedor-slider">  
-    <div class="slide-izquierdo">  
+<div class="slider-container">  
+    <div class="right-slide">  
         <div style="background-color: #9d8d81">  
-            <h1>Primavera<br>a la Ciutat</h1>  
-            <p style="color: #157575">Del 5 al 8 de junio</p>  
+            <h1>Primavera<br>in the City</h1>  
+            <p style="color: #157575">From June 5 to 8</p>  
         </div> 
         <div style="background-color: #157575">  
           <h1>Primavera Sound<br>2nd Weekend</h1>  
-          <p style="color: #b19782">Del 9 al 11 de junio</p>  
+          <p style="color: #b19782">From June 9 to 11</p>  
         </div>  
         <div style="background-color: #657e85">  
           <h1>Primavera Sound<br>1st Weekend</h1>  
-          <p style="color: #FFE598">Del 2 al 4 de junio</p>  
+          <p style="color: #FFE598">From June 2 to 4</p>  
         </div>  
     </div>  
-    <div class="slide-derecho">  
+    <div class="left-slide">  
         <div style="background-image: url('img/PS01.jpeg');"></div>  
         <div style="background-image: url('img/PS02.jpg');"></div>  
         <div style="background-image: url('img/PCIUTAT.jpg');"></div>     
     </div>  
-    <div class="accion-botones">  
-        <button class="bajar-button">  
+    <div class="action-buttons">  
+        <button class="down-button">  
             <i class="fas fa-arrow-down"></i>  
         </button>  
-        <button class="subir-button">  
+        <button class="up-button">  
           <i class="fas fa-arrow-up"></i>  
         </button>  
     </div>  
 </div>  
 
-<script>
-
-    
-const contenedorSlider = document.querySelector(".contenedor-slider");  
-const slideDerecho = document.querySelector(".slide-derecho");  
-const slideIzquierdo = document.querySelector(".slide-izquierdo");  
-const subirButton = document.querySelector(".subir-button");  
-const bajarButton = document.querySelector(".bajar-button");  
-const slidesLength = slideDerecho.querySelectorAll("div").length;  
-
-let activeSlideIndex = 0;  
-slideIzquierdo.style.top = `-${(slidesLength - 1) * 100}vh`;  
-const changeSlide = (direction) => {  
-const sliderHeight = contenedorSlider.clientHeight;  
-
-if (direction === "subir") {  
-activeSlideIndex++;  
-if (activeSlideIndex > slidesLength - 1) activeSlideIndex = 0;  
-} else if (direction === "bajar") {  
-activeSlideIndex--;  
-if (activeSlideIndex < 0) activeSlideIndex = slidesLength - 1;  
-}  
-
-slideDerecho.style.transform = `translateY(-${  
-activeSlideIndex * sliderHeight }px)`;  
-slideIzquierdo.style.transform = `translateY(${  
-activeSlideIndex * sliderHeight  
-}px)`;  
-}; 
-
-subirButton.addEventListener("click", () => changeSlide("subir"));  
-bajarButton.addEventListener("click", () => changeSlide("bajar"));  
-
-
-
-
-</script>
-    
+<script src="js/script.js"></script>
 </body>
 </html>
